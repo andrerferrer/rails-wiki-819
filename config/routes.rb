@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   resources :sections, only: [] do
     resources :edit_requests, only: [:new, :create, :index]
   end
+
+  resources :edit_requests, only: [:update]
+
 end

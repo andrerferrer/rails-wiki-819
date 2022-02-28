@@ -4,6 +4,8 @@
   <% @edit_requests.each do |edit_request| %>
     <li>
       <p><%= edit_request.new_text %></p>
+      <%= link_to '✅', edit_request_path(edit_request, update: :approve), method: :patch %>
+      <%= link_to '❌', edit_request_path(edit_request, update: :reject), method: :patch %>
     </li>
   <% end %>
 </ul>
