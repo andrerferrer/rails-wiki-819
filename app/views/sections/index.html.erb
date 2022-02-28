@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Sections#Index for Post #<%= @post.id %></h1>
+  
+  <ul>
+    <% @sections.each do |section| %>
+      <li>
+        <div class="d-flex">
+          <p><%= section.text %></p>
+          <%= link_to "Edit this section", `section_path(section)` %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
