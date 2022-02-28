@@ -1,4 +1,4 @@
-first_post = Post.new
+first_post = Post.create
 
 Section.create!(text: "First Paragraph", post: first_post)
 Section.create!(text: "Second Paragraph", post: first_post)
