@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   end
 
   resources :sections, only: [] do
-    resources :edit_requests, only: [:new, :create]
+    resources :edit_requests, only: [:new, :create, :index]
   end
 end

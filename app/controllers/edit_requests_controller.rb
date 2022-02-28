@@ -1,4 +1,9 @@
 class EditRequestsController < ApplicationController
+  def index
+    @section = Section.find params[:section_id]
+    @edit_requests = @section.edit_requests
+  end
+  
   def new
     @section = Section.find params[:section_id]
     @edit_request = EditRequest.new
@@ -9,8 +14,8 @@ class EditRequestsController < ApplicationController
     @section = Section.find params[:section_id]
     @edit_request.section = @section
 
-    if @section.save
-      redirect_to 'Something_path'
+    if @edit_request.save
+      redirect_to section_edit_requests_path(@section)
     else
       render 'new'
     end

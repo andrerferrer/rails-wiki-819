@@ -1,0 +1,9 @@
+<h1>EditRequests for Section#<%= @section.id %> inside Post#<%= @section.post.id %></h1>
+
+<ul>
+  <% @edit_requests.each do |edit_request| %>
+    <li>
+      <p><%= edit_request.new_text %></p>
+    </li>
+  <% end %>
+</ul>
