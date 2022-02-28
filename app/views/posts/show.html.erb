@@ -1,0 +1,10 @@
+<%= link_to 'Edit this post', post_sections_path(@post) %>
+
+<div class="container">
+  <% @post.sections.each do |section| %>
+    <p>
+      <%= section.text %>
+    </p>
+  <% end %>
+</div>
+
