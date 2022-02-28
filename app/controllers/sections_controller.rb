@@ -3,5 +3,4 @@ class SectionsController < ApplicationController
     @post = Post.find params[:post_id]
     @sections = @post.sections
   end
-
 end

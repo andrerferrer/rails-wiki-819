@@ -6,7 +6,7 @@
       <li>
         <div class="d-flex">
           <p><%= section.text %></p>
-          <%= link_to "Edit this section", `section_path(section)` %>
+          <%= link_to "Edit this section", new_section_edit_request_path(section) %>
         </div>
       </li>
     <% end %>
